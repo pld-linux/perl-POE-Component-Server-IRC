@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	POE
-%define	pnam	Component-Server-IRC
+%define		pdir	POE
+%define		pnam	Component-Server-IRC
 Summary:	POE::Component::Server::IRC - Perl extension for making a subclassable POE session 
 Summary(pl):	POE::Component::Server::IRC - rozszerzenie do tworzenia dziedziczonych sesji POE
 Name:		perl-POE-Component-Server-IRC
