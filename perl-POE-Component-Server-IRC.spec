@@ -6,7 +6,7 @@
 %define		pdir	POE
 %define		pnam	Component-Server-IRC
 Summary:	POE::Component::Server::IRC - Perl extension for making a subclassable POE session 
-Summary(pl):	POE::Component::Server::IRC - rozszerzenie do tworzenia dziedziczonych sesji POE
+Summary(pl.UTF-8):   POE::Component::Server::IRC - rozszerzenie do tworzenia dziedziczonych sesji POE
 Name:		perl-POE-Component-Server-IRC
 Version:	0.0001
 Release:	1
@@ -28,11 +28,11 @@ General framework for creating an IRC daemon. Very very alpha code,
 structures are not fully designed, bugs do exist. That said, have fun
 with it, I hope to upload new versions often enough.
 
-%description -l pl
-Ogólny szkielet do tworzenia demonów IRC. Kod zdecydowanie w stadium
-alpha, nie ma jeszcze w pe³ni opracowanych struktur, zawiera b³êdy. To
-oznacza, ¿e mo¿na siê z tym pobawiæ, autor ma nadziejê na
-opublikowanie wkrótce nowych wersji.
+%description -l pl.UTF-8
+OgÃ³lny szkielet do tworzenia demonÃ³w IRC. Kod zdecydowanie w stadium
+alpha, nie ma jeszcze w peÅ‚ni opracowanych struktur, zawiera bÅ‚Ä™dy. To
+oznacza, Å¼e moÅ¼na siÄ™ z tym pobawiÄ‡, autor ma nadziejÄ™ na
+opublikowanie wkrÃ³tce nowych wersji.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
