@@ -6,7 +6,7 @@
 %define		pdir	POE
 %define		pnam	Component-Server-IRC
 Summary:	POE::Component::Server::IRC - Perl extension for making a subclassable POE session 
-Summary(pl.UTF-8):   POE::Component::Server::IRC - rozszerzenie do tworzenia dziedziczonych sesji POE
+Summary(pl.UTF-8):	POE::Component::Server::IRC - rozszerzenie do tworzenia dziedziczonych sesji POE
 Name:		perl-POE-Component-Server-IRC
 Version:	0.0001
 Release:	1
