@@ -8,17 +8,19 @@
 Summary:	POE::Component::Server::IRC - Perl extension for making a subclassable POE session 
 Summary(pl.UTF-8):	POE::Component::Server::IRC - rozszerzenie do tworzenia dziedziczonych sesji POE
 Name:		perl-POE-Component-Server-IRC
-Version:	0.0001
+Version:	1.11
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	a89dc71e568737a6940743b1fbcf4d8d
+# Source0-md5:	3afb6bd627a23f0463379be051022f90
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-POE
+BuildRequires:	perl-Net-Netmask
+BuildRequires:	perl-POE-Component-IRC > 5.18
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -57,5 +59,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_vendorlib}/%{pdir}/*/*/*
-%{perl_vendorlib}/%{pdir}/*/*.pm
+#%{perl_vendorlib}/%{pdir}/*/*.pm
 %{_mandir}/man3/*
