@@ -5,22 +5,24 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	POE
 %define		pnam	Component-Server-IRC
-Summary:	POE::Component::Server::IRC - Perl extension for making a subclassable POE session 
+Summary:	POE::Component::Server::IRC - Perl extension for making a subclassable POE session
 Summary(pl.UTF-8):	POE::Component::Server::IRC - rozszerzenie do tworzenia dziedziczonych sesji POE
 Name:		perl-POE-Component-Server-IRC
-Version:	1.24
+Version:	1.38
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/POE/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	b4936fa61c0abc4ebed6fd2dd77add4d
+# Source0-md5:	24198990141e66a4d72ecfe018abd457
 URL:		http://search.cpan.org/dist/POE-Component-Server-IRC/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-POE
+BuildRequires:	perl(Crypt::PasswdMD5) >= 1.3
+BuildRequires:	perl(POE::Component::Client::Ident) >= 1
 BuildRequires:	perl-Net-Netmask
+BuildRequires:	perl-POE
 BuildRequires:	perl-POE-Component-IRC > 5.18
 %endif
 BuildArch:	noarch
@@ -59,6 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
+%attr(755,root,root) %{_bindir}/pmkpasswd
 %{perl_vendorlib}/%{pdir}/*/*/*
 #%{perl_vendorlib}/%{pdir}/*/*.pm
-%{_mandir}/man3/*
+%{_mandir}/man?/*
